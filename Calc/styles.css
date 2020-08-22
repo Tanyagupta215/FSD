@@ -1,0 +1,53 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, gray, lightgray);
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-rows: minmax(100px, auto)repeat(5, 70px);
+    grid-template-columns: repeat(4, 70px);
+
+}
+
+.calculator-grid > button
+ {
+    font-size: larger;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1 / -1;
+    background-color: darkslategrey;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 15px;
+
+}
+
+.output .previous-operand{
+    color: floralwhite;
+    font-size: medium;
+}
+
+.output .current-operand{
+    color: white;
+    font-size: larger;
+
+}
+
+
